@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DB</title>
+    <style>
+        body {
+            transition: background-color 0.1s;
+        }
+        #vv {
+            width: 200px;
+            height: 200px;
+            background: plum;
+        }
+    </style>
+</head>
+<body>
+    <div id="vv"></div>
+    <script>
+        let p3 = 'Blue';
+        let p = 'red';
+        let p2 = 'Green';
+        let x = 0;
+        let box = document.getElementById('vv');
+
+        box.onclick = function() {
+            x++;
+            if (x == 1) {
+                document.body.style.backgroundColor = p;
+                box.style.background = p;
+            } else if (x == 2) {
+                document.body.style.backgroundColor = p2;
+                box.style.background = p2;
+            } else if (x == 3) {
+                document.body.style.backgroundColor = p3;
+                box.style.background = p3;
+                x = 0; // إعادة تعيين x بعد تغيير اللون الثالث
+            }
+        };
+    </script>
+</body>
+</html>
